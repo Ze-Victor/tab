@@ -26,11 +26,15 @@
 
 <style>
   button {
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     margin-right: 10px;
     background-color: #ccc;
     border: 1px solid rgb(118, 118, 118);
     border-radius: 3px;
-    padding: 2px 5px;
   }
   .selected {
     font-weight: bold;
