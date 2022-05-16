@@ -1,7 +1,7 @@
 <div class="buttons">
     <button
       class={ index === selection ? 'selected' : '' }
-      on:click={ e => clicked(index) } >
+      on:click={ e => onclicked(index) } >
       { buttonText }
     </button>
   </div>
@@ -10,15 +10,13 @@
 
   import { createEventDispatcher } from 'svelte'
 
-  export let buttonText: string = ''
-  export let selection: number
-  export let index: number
-
-  console.log(buttonText)
+  export let buttonText = ''
+  export let selection = null
+  export let index = 0
 
   const dispatcher = createEventDispatcher()
 
-  function clicked(idx: number) {
+  function onclicked(idx) {
     console.log('Clicou no botão ', idx)
     dispatcher('selection', idx)
   }

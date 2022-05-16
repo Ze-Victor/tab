@@ -10,7 +10,7 @@
 		{/each}
 	</div>
 	<div class="enunciationPane">
-		<h2>{currentButton >= 0 ? tab[currentButton].description : 'Clique em um botão' }</h2>
+		<h2>{currentButton !== null ? tab[currentButton].description : 'Clique em um botão' }</h2>
 	</div>
 </div>
 
@@ -36,10 +36,10 @@ const tab = [
 		buttonText: 'Tab 4'
 	}
 ]
-let currentButton: number
+let currentButton = null
 
 
-function onSelection(option: number) {
+function onSelection(option) {
   currentButton = option
   console.log(`opção selecionada ${option}`)
 }
